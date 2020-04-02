@@ -1,0 +1,632 @@
+*{
+    box-sizing: border-box;
+
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+body{
+    font-family: 'Cormorant Garamond', serif;
+    /*font-family: 'Bellota Text', cursive;*/
+    /*font-family: 'Viaoda Libre', cursive;*/
+    /*font-family: 'PT Serif', serif;*/
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #5e5e5e;
+}
+.header__top{
+    background-color: #D9E1FF;
+}
+/*НАЗВАНИЕ САЙТА*/
+.header__logo{
+    float: left;
+    font-family: 'Bellota Text', cursive;
+    font-size: 25px;
+    line-height: 35px;
+    color: #5e5e5e;
+
+}
+.header__btn{
+    float: right;
+    font-family: 'Bellota Text', cursive;
+    line-height: 35px;
+    color: #1b1b1b;
+    background-color: #8E5CB7;
+    padding: 5px 20px 4px 50px;
+    font-size: 16px;
+    position: relative;
+    border-radius: 5px
+}
+.header__btn:before{
+    content: "\e945";
+    font-family: 'icomoon';
+    position: absolute;
+    left: 22px;
+    color: white;
+}
+.header__contacts:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.header__phone,
+.header__email{
+    color: #8E5CB7;
+    font-family: 'Bellota Text', cursive;
+    letter-spacing:0.5px;
+    line-height: 45px;
+    position: relative;
+    left: 3px;
+}
+.header__phone{
+    padding-left: 20px;
+    padding-right: 30px;
+    position: relative;
+}
+.header__phone:before{
+    content: "\e942";
+    font-family: 'icomoon';
+    position: absolute;
+    left: 0;
+    color: black;
+}
+
+.header__email{
+    padding-left: 24px;
+}
+.header__email:before{
+    font-family: 'icomoon';
+    position: absolute;
+    content: "\e945";
+    color: black;
+    left: 4px;
+}
+.header__content{
+    padding: 34px 0 23px;
+}
+.header__content-inner {
+    display: flex;
+    justify-content: space-between;
+}
+.menu li{
+    display: inline-block;
+}
+.menu a{
+    font-family: 'Bellota Text', cursive;
+    color: #323232;
+    font-size: 16px;
+    line-height: 36px;
+    border: 1.5px solid;
+    border-color: transparent;
+    padding: 0 16px;
+    transition: all 1.5s;
+    border-radius: 7px;
+}
+.menu a:hover {
+    background-color: #E6E6E6;
+    border-color: #8E5CB7;
+}
+.menu li + li {
+    padding-left: 10px;
+}
+#modal {
+    display: none;
+}
+.slider{
+    background-image:url(../img/kidas.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+
+}
+.slider__item-content{
+    text-align: center;
+    padding-top: 110px;
+    max-width: 665px;
+    margin: 0 auto;
+
+}
+.slider__title{
+    text-transform: uppercase;
+    font-size: 32px;
+    line-height: 36px;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 22px;
+    letter-spacing: 1.5px;
+    font-family: 'Bellota Text', cursive bold;
+    font-weight: bolder;
+}
+.slider__text{
+    line-height: 24px;
+    font-size: 24px;
+    color: white;
+    margin-bottom: 50px;
+    font-family: 'Bellota Text', cursive bold;
+    font-weight: bolder;
+}
+/*кнопка*/
+.default-btn{    display: inline-block;
+    font-size: 14px;
+    line-height: 24px;
+    color: white;
+    font-weight: 500;
+    font-family: 'Bellota Text', cursive bold;
+    padding: 8px 30px 8px 24px;
+    border: 3px solid;
+    border-color: #8E5CB7;
+    border-radius: 3px;
+    border-right-width: 25px;
+    position: relative;
+    z-index: 2;
+}
+.default-btn:after{
+    content: "\e900";
+    font-family: 'icomoon';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -18px;
+}
+.slider__inner{
+    position: relative;
+}
+.slick-btn{
+    z-index: 3;
+    position: absolute;
+    top: 70%;
+    height: 40px;
+    width: 40px;
+    border: 2px solid;
+    border-color: white;
+    background-color: transparent;
+    cursor: pointer;
+    background-color: #8E5CB7;
+}
+.slick-btn:hover{
+    background-color: transparent;
+}
+.slick-btn.slick-disabled{
+    cursor: default;
+    background-color: transparent;
+}
+
+.slick-btn:before{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+/*вставка стрелки слайдера*/
+.slick-next:before{
+    font-family: 'icomoon';
+    content: "\e900";
+}
+.slick-next{
+    right: 0;
+}
+/*вставка стрелки слайдера*/
+.slick-prev:before{
+    font-family: 'icomoon';
+    content: "\e901";
+}
+.slick-prev{
+ left: 0;
+}
+/*ABOUT ГЛАВА О НАС*/
+.about{
+    padding: 50px 0 30px;
+}
+.about__top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 55px;
+}
+.about__title-box,
+.form__title-box,
+.news__title-box {
+    max-width: 520px;
+    padding-left: 140px;
+    position: relative;
+}
+.about__title-box:before,
+.form__title-box:before,
+.news__title-box:before {
+    content: "";
+    position: absolute;
+    background-color: #8E5CB7;
+    width: 100px;
+    height: 2px;
+    left: 0;
+    top: 15px;
+}
+.about-title,
+.form__title,
+.news__title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    color: darkslategray;
+    font-family: 'Bellota Text', cursive;
+    margin-bottom: 10px;
+}
+.about-text,
+.form__text,
+.news__text{
+    letter-spacing: 0.1px;
+    font-size: 14px;
+    color: darkslategray;
+    font-family: 'Bellota Text', cursive;
+}
+
+.about__btn a{
+    color: darkslategray;
+    font-family: 'Bellota Text', cursive;
+    line-height: 24px;
+    letter-spacing: 0.25px;
+    border: 3px solid #8E5CB7;
+    border-radius: 3px;
+    padding: 5px 38px;
+}
+.about__items{
+    display: flex;
+    justify-content: space-between;
+}
+.about__item {
+    max-width: 350px;
+    text-align: center;
+    padding: 10px 0 50px;
+    position: relative;
+    min-height: 320px;
+    background-color: #f9f9f9;
+    box-shadow: 0 7px 24px 3px rgba(91, 89, 89, 0.14);
+}
+
+.about__item-title{
+    color: darkslategray;
+    font-size: 18px;
+    font-family: 'Bellota Text', cursive, bold;
+    line-height: 24px;
+    font-weight: 500;
+    padding: 10px 0;
+}
+.about__item-text {
+    color: darkslategray;
+    font-family: 'Bellota Text', cursive;
+    letter-spacing: 0.1px;
+    padding: 0 30px 30px 0;
+
+}
+.about__item-btn{
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+}
+.about__item-link{
+    color: darkslategray;
+    font-family: 'Bellota Text', cursive;
+    font-size: 14px;
+   /*border-bottom: 1px solid darkslategray;*/
+    border: 1px solid #8E5CB7;
+    border-radius: 2px;
+}
+.about__item-link:hover{
+    background-color: lightblue;
+}
+
+/*!!! ABOUT1 МЕНТАЛЬНАЯ АРИФМЕТИКА */
+/* ЕСЛИ ХОТИМ ПОМЕСТИТЬ ФОТО НА ЗАДНИЙ ПЛАН
+.about1{
+    background-image: url("../img/about-5.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 200px;
+}
+*/
+
+.about1__title{
+    background-color: #f9f9f9;
+    box-shadow: 0 7px 24px 3px rgba(91, 89, 89, 0.14);
+    text-align: center;
+    margin-bottom: 20px;
+}
+.about1__text{
+    color: darkslategray;
+    font-size: 18px;
+    font-family: 'Bellota Text', cursive;
+    letter-spacing: 0.1px;
+    padding: 0 30px 30px 0;
+    margin-left: 15px;
+    text-align: center;
+    line-height: 24px;
+}
+.about1__textbody{
+    color: darkslategray;
+    font-size: 14px;
+    font-family: 'Bellota Text', cursive;
+    letter-spacing: 0.1px;
+    padding: 0 25px 25px 0;
+    margin-left: 7.5px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+.form{
+    padding-top: 30px;
+}
+.form__inner{
+    padding-bottom: 40px;
+    background-image: url("../img/form-1.jpg");
+    min-height: 500px;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+.form__box{
+    max-width: 500px;
+    padding-top: 45px;
+}
+.form__box-inner {
+    display: flex;
+    justify-content: space-between;
+}
+.form__box-left{
+    max-width: 180px;
+    width: 100%;
+}
+.form__box-right{
+    max-width: 220px;
+    width: 100%;
+}
+.form__box-inner label,
+.form__box-inner input,
+.form__box-inner textarea {
+    display: block;
+    width: 100%;
+
+}
+.form__box-inner label
+{
+    line-height: 40px;
+    color: darkslategray;
+    font-family: 'Bellota Text', cursive;
+}
+.form__box-inner input{
+    margin-bottom: 8px;
+    outline: none;
+    height: 40px;
+    border: 1px solid #e6e6e6;
+    padding: 0 10px;
+}
+.form__box-inner textarea{
+    outline: none;
+    border: 1px solid #e6e6e6;
+    padding: 10px;
+    height: 215px;
+    resize: none;
+    margin-bottom: 60px;
+}
+.form__box-inner button {
+    color: darkslategray;
+    background-color: transparent;
+}
+.default-btn:after{
+    content: "\e900";
+    font-family: 'icomoon';
+    color: white;
+}
+.news{
+    padding: 55px 0 20px;
+    background-color: #f9f9f9;
+}
+.news__inner{
+    display: flex;
+    justify-content: space-between;
+}
+.news__slider:before{
+    font-family: 'icomoon';
+    content: "\e978";
+    color: white;
+    font-size: 18px;
+    width: 55px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: #8E5CB7;
+    position: absolute;
+    top: 0;
+    left: 70px;
+}
+.news__slider {
+    max-width: 555px;
+    height: 400px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 5px 15px 0.64px rgba(128, 127, 127, 0.13);
+    padding: 60px 35px 45px;
+    position: relative;
+}
+.news__blog{
+    max-width: 260px;
+    width: 100%;
+    max-height: 450px;
+    height: 100%;
+}
+.news__images{
+    position: relative;
+}
+.news__blog-title{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Bellota Text', cursive;
+    line-height: 24px;
+    color: darkslategray;
+    letter-spacing: 0.5px;
+    padding: 12px 2px;
+
+}
+.news__blog-text{
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Bellota Text', cursive;
+    line-height: 18px;
+    color: darkslategray;
+    letter-spacing: 0.1px;
+
+}
+.news__slider-title {
+    font-size: 24px;
+    line-height: 24px;
+    color: darkslategray;
+    font-family: 'Bellota Text', cursive;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+}
+.news__slider-text {
+    margin-bottom: 30px;
+    font-size: 14px;
+    font-family: 'Bellota Text', cursive;
+    line-height: 24px;
+}
+.news__slider-inner .slick-btn{
+   top:auto;
+    bottom: -40px;
+}
+.news__slider-inner .slick-next{
+right: -25px;
+}
+.news__slider-inner .slick-prev{
+right: 20px;
+    left: auto;
+}
+.news__slider-inner .slick-next:hover{
+     background-color: lightblue;
+ }
+.news__slider-inner .slick-prev:hover{
+    background-color: lightblue;
+}
+/*FOOTER*/
+
+.footer__content{
+    background-color: #D9E1FF;
+    padding-top: 15px;
+   /* padding: 20px 0 30px; */
+}
+.footer__inner{
+display: flex;
+justify-content: space-between}
+.footer__inner .header__btn {
+    float: none;
+    display: inline-block;
+}
+.footer__map{
+    padding-top: 10px;
+    max-width: 630px;
+}
+/*.footer__map iframe{
+    height: 250px;
+    max-width: 630px;
+    width: 100%;
+}*/
+.footer__title{
+    font-family: 'Bellota Text', cursive;
+    font-weight: 500;
+    font-size: 16px;
+    color: darkslategray;
+    line-height: 36px;
+    letter-spacing: 0.5px;
+}
+.footer__text{
+    margin-bottom: 20px;
+    line-height: 36px;}
+
+.footer__info{
+    max-width: 360px;
+}
+.footer__list {
+    padding-top: 10px;
+}
+.footer__list li {margin-top: 10px;
+    line-height: 24px;
+    color: darkslategray;
+    letter-spacing: 0.5px;
+    font-family: 'Bellota Text', cursive;
+}
+.footer__list a{
+    content: "";
+    left: 0;
+    position: absolute;
+    color: #8E5CB7;
+}
+.footer__list a:before{
+    font-family: 'icomoon';
+    content: "\e945"
+}
+.footer__list .footer__phone:before{
+    font-family: 'icomoon';
+    content: "\e942";
+    left: 3px;
+}
+.footer__list .footer__map:before{
+    font-family: 'icomoon';
+    content: "\e947";
+    left: 3px;
+}
+.footer__list li a{
+    line-height: 24px;
+    color: darkslategray;
+    letter-spacing: 0.5px;
+    font-family: 'Bellota Text', cursive;
+    position: relative;
+}
+.footer__copy {
+    background-color: #6889BC;
+    text-align: center;
+    font-family: 'Bellota Text', cursive;
+    color: white;
+}
+#modal {
+    width: 300px;
+}
+#modal input {
+    display: block;
+    width: 100%;
+    padding: 0 10px ;
+    border: 1px solid #e6e6e6;
+    outline: none;
+    margin-bottom: 20px;
+    height: 40px;
+    font-family: 'Bellota Text', cursive;
+}
+#modal input[type="submit"]
+{
+    background-color: #8E5CB7;
+    color: #E6E6E6;
+    border: none
+}
+
+
+
+
+
+
+
+
+5:49
