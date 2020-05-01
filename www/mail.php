@@ -8,7 +8,7 @@ $message = '';
 if ($method === 'POST') {
 
     $project_name = trim($_POST["project_name"]);
-    $admin_email = trim($_POST["admin_email"]);
+    $admin_email = "sasha.kub95@gmail.com";
     $form_subject = trim($_POST["form_subject"]);
 
     foreach ($_POST as $key => $value) {
@@ -51,9 +51,9 @@ $headers = "MIME-Version: 1.0" . PHP_EOL .
     'From: ' . adopt($project_name) . ' <' . $admin_email . '>' . PHP_EOL .
     'Reply-To: ' . $admin_email . '' . PHP_EOL;
 
-//mail($admin_email, adopt($form_subject), $message, $headers);
-echo $message;
 Mail::smtp_mail_send('', $admin_email, adopt($form_subject), $message, '');
+
+header('Location: '.'/');
 
 class Mail
 {
@@ -65,7 +65,7 @@ class Mail
         'smtp_password' => '',
         'smtp_debug' => 'true',
         'smtp_charset' => 'utf-8',
-        'smtp_from' => ''
+        'smtp_from' => 'TEST'
     );
 
     public static function smtp_mail_send($to = '', $mail_to, $subject, $message, $headers = '')
@@ -97,7 +97,7 @@ class Mail
         fputs($socket, "HELO " . self::$config['smtp_host'] . "\r\n");
         if (!self::server_parse($socket, "250", __LINE__)) {
             if (self::$config['smtp_debug'])
-                echo '<p>Не могу отправить HELO!</p>';
+                echo '<p>Не могу отправить HELLO!</p>';
             fclose($socket);
             return false;
         }
